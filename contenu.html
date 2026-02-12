@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Letessier — Portfolio</title>
+    <meta name="description"
+        content="Portfolio d'Alan Letessier, étudiant en réseaux et télécommunications. Spécialisé IoT, conteneurisation, et administration réseau.">
+    <meta name="author" content="Alan Letessier">
+    <meta name="keywords"
+        content="Alan Letessier, portfolio, réseaux, télécommunications, IoT, CCNA, développeur, alternance">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">A<span>L</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#experience" class="nav-link">Expérience</a></li>
+                <li><a href="#education" class="nav-link">Formation</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-effects">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-badge animate-on-scroll">
+                    <span class="badge-dot"></span>
+                    Recherche d'alternance de 2 ans — Septembre 2026
+                </span>
+                <h1 class="hero-title animate-on-scroll">
+                    Alan<br><span class="hero-title-accent">Letessier</span>
+                </h1>
+                <p class="hero-subtitle animate-on-scroll">
+                    <span id="typingText"></span><span class="cursor">|</span>
+                </p>
+                <p class="hero-description animate-on-scroll">
+                    Étudiant passionné en BUT3 Réseaux &amp; Télécommunications, spécialité IoT.<br>
+                    En quête d'un Master en alternance de 2 ans pour la rentrée 2026.
+                </p>
+                <div class="hero-actions animate-on-scroll">
+                    <a href="#contact" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        Me contacter
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        En savoir plus
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <polyline points="19 12 12 19 5 12" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual animate-on-scroll">
+
+                <div class="hero-floating-cards">
+                    <div class="floating-card fc-1">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        <span>Réseaux &amp; Télécom</span>
+                    </div>
+                    <div class="floating-card fc-2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                        <span>IoT &amp; DevOps</span>
+                    </div>
+                    <div class="floating-card fc-3">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        <span>CCNA Certifié</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">01</span>
+                <h2 class="section-title">À propos</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll">
+                    <p class="about-intro">
+                        Je m'appelle <strong>Alan</strong>, j'ai 21 ans. Passionné par <strong>l'informatique</strong>
+                        et le <strong>sport</strong>,
+                        je suis animé par l'apprentissage de nouvelles choses et l'amélioration continue de mes
+                        compétences.
+                    </p>
+                    <p>
+                        Actuellement en BUT3 Réseaux &amp; Télécommunications avec une spécialisation IoT à l'Université
+                        de Tours,
+                        je recherche une alternance de 2 ans pour poursuivre vers un Master à partir de septembre 2026.
+                    </p>
+                </div>
+                <div class="about-cards animate-on-scroll">
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Localisation</span>
+                            <span class="info-value">Blois, France</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5" />
+                            </svg>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Situation</span>
+                            <span class="info-value">BUT3 R&amp;T — Recherche alternance 2 ans</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                        </div>
+                        <div class="info-card-content">
+                            <span class="info-label">Langues</span>
+                            <span class="info-value">Français · Anglais (B2)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">02</span>
+                <h2 class="section-title">Compétences</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-category animate-on-scroll">
+                    <h3 class="skills-category-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                        Réseaux &amp; Protocoles
+                    </h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">TCP / IP</span>
+                        <span class="skill-tag">DNS</span>
+                        <span class="skill-tag">DHCP</span>
+                        <span class="skill-tag">HTTP / HTTPS</span>
+                        <span class="skill-tag">SNMP</span>
+                        <span class="skill-tag">OSPF</span>
+                        <span class="skill-tag">BGP</span>
+                        <span class="skill-tag">VLAN</span>
+                        <span class="skill-tag">Spanning Tree</span>
+                        <span class="skill-tag">QoS</span>
+                        <span class="skill-tag">ACL</span>
+                        <span class="skill-tag">NAT / PAT</span>
+                        <span class="skill-tag">IPv4 / IPv6</span>
+                        <span class="skill-tag">Switching</span>
+                        <span class="skill-tag">Routing</span>
+                        <span class="skill-tag">Firewall</span>
+                    </div>
+                </div>
+                <div class="skills-category animate-on-scroll">
+                    <h3 class="skills-category-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        Télécommunications
+                    </h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Fibre optique</span>
+                        <span class="skill-tag">Ethernet</span>
+                        <span class="skill-tag">Wi-Fi (802.11)</span>
+                        <span class="skill-tag">Bluetooth</span>
+                        <span class="skill-tag">LoRa / LoRaWAN</span>
+                        <span class="skill-tag">Zigbee</span>
+                        <span class="skill-tag">4G / 5G</span>
+                        <span class="skill-tag">Physique des ondes</span>
+                        <span class="skill-tag">Modulation</span>
+                        <span class="skill-tag">Antennes</span>
+                        <span class="skill-tag">Câblage cuivre</span>
+                    </div>
+                </div>
+                <div class="skills-category animate-on-scroll">
+                    <h3 class="skills-category-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                        IoT &amp; Systèmes embarqués
+                    </h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">ESP32 / ESP8266</span>
+                        <span class="skill-tag">Raspberry Pi</span>
+                        <span class="skill-tag">MicroPython</span>
+                        <span class="skill-tag">Arduino</span>
+                        <span class="skill-tag">Capteurs &amp; Actionneurs</span>
+                        <span class="skill-tag">MQTT</span>
+                        <span class="skill-tag">CoAP</span>
+                        <span class="skill-tag">Bus I²C / SPI</span>
+                        <span class="skill-tag">GPIO</span>
+                        <span class="skill-tag">Objets connectés</span>
+                    </div>
+                </div>
+                <div class="skills-category animate-on-scroll">
+                    <h3 class="skills-category-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                            <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                            <line x1="6" y1="6" x2="6.01" y2="6" />
+                            <line x1="6" y1="18" x2="6.01" y2="18" />
+                        </svg>
+                        Infrastructure &amp; Administration
+                    </h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Linux (Debian, Ubuntu)</span>
+                        <span class="skill-tag">Windows Server</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Conteneurisation</span>
+                        <span class="skill-tag">Load Balancing</span>
+                        <span class="skill-tag">Virtualisation</span>
+                        <span class="skill-tag">Supervision réseau</span>
+                        <span class="skill-tag">Active Directory</span>
+                        <span class="skill-tag">VPN</span>
+                        <span class="skill-tag">Sécurité réseau</span>
+                        <span class="skill-tag">Cloudflare (Proxy, WAF)</span>
+                        <span class="skill-tag">Anti-DDoS</span>
+                        <span class="skill-tag">Cloudflare Zero Trust</span>
+                        <span class="skill-tag">Cloudflare DNS</span>
+                    </div>
+                </div>
+                <div class="skills-category animate-on-scroll">
+                    <h3 class="skills-category-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                        Cryptographie &amp; Sécurité
+                    </h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Diffie-Hellman</span>
+                        <span class="skill-tag">RSA</span>
+                        <span class="skill-tag">AES</span>
+                        <span class="skill-tag">TLS / SSL</span>
+                        <span class="skill-tag">Certificats X.509</span>
+
+                        <span class="skill-tag">Hachage (SHA, MD5)</span>
+                        <span class="skill-tag">Chiffrement symétrique</span>
+                        <span class="skill-tag">Chiffrement asymétrique</span>
+                        <span class="skill-tag">IPsec</span>
+                    </div>
+                </div>
+                <div class="skills-category animate-on-scroll">
+                    <h3 class="skills-category-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                        Développement &amp; Scripting
+                    </h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">HTML / CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">API REST</span>
+                    </div>
+                </div>
+                <div class="skills-category animate-on-scroll">
+                    <h3 class="skills-category-title">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        Soft skills
+                    </h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Gestion d'équipe</span>
+                        <span class="skill-tag">Organisation d'événements</span>
+                        <span class="skill-tag">Travail associatif</span>
+                        <span class="skill-tag">Diagnostic matériel</span>
+                        <span class="skill-tag">Gestion de projet</span>
+                        <span class="skill-tag">Veille technologique</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">03</span>
+                <h2 class="section-title">Expérience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card timeline-expandable">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Avril 2025 — Juillet 2025</span>
+                            <span class="timeline-badge">Stage</span>
+                        </div>
+                        <h3 class="timeline-title">Stagiaire — GHT Santé 41</h3>
+                        <p class="timeline-desc">Deux missions principales :</p>
+                        <ul class="timeline-list">
+                            <li>Remplacement du matériel du cœur de réseau d'un site</li>
+                            <li>Étude et mise en place d'une solution de secours 4G/5G</li>
+                        </ul>
+                        <div class="timeline-expand-hint">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                            <span>Voir les compétences</span>
+                        </div>
+                        <div class="timeline-details">
+                            <div class="timeline-skills-label">Compétences mobilisées</div>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Switching</span>
+                                <span class="skill-tag">Routing</span>
+                                <span class="skill-tag">VLAN</span>
+                                <span class="skill-tag">OSPF</span>
+                                <span class="skill-tag">4G / 5G</span>
+                                <span class="skill-tag">Fibre optique</span>
+                                <span class="skill-tag">Firewall</span>
+                                <span class="skill-tag">Supervision réseau</span>
+                                <span class="skill-tag">Câblage cuivre</span>
+                                <span class="skill-tag">Diagnostic matériel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card timeline-expandable">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2023 — 2025</span>
+                            <span class="timeline-badge">Associatif</span>
+                        </div>
+                        <h3 class="timeline-title">Président — E.T.E.R.</h3>
+                        <p class="timeline-desc">Association étudiante Télécoms et Réseaux :</p>
+                        <ul class="timeline-list">
+                            <li>Gestion d'une cafétéria (petit commerce)</li>
+                            <li>Organisation d'événements</li>
+                            <li>Gestion d'équipes (3 à 10 personnes)</li>
+                        </ul>
+                        <div class="timeline-expand-hint">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                            <span>Voir les compétences</span>
+                        </div>
+                        <div class="timeline-details">
+                            <div class="timeline-skills-label">Compétences mobilisées</div>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Gestion d'équipe</span>
+                                <span class="skill-tag">Gestion de projet</span>
+                                <span class="skill-tag">Organisation d'événements</span>
+                                <span class="skill-tag">Comptabilité basique</span>
+                                <span class="skill-tag">Communication</span>
+                                <span class="skill-tag">Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card timeline-expandable">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2024</span>
+                            <span class="timeline-badge">Job d'été</span>
+                        </div>
+                        <h3 class="timeline-title">Préparateur de commande</h3>
+                        <ul class="timeline-list">
+                            <li>Préparation des commandes</li>
+                            <li>Livraison des commandes</li>
+                        </ul>
+                        <div class="timeline-expand-hint">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                            <span>Voir les compétences</span>
+                        </div>
+                        <div class="timeline-details">
+                            <div class="timeline-skills-label">Compétences mobilisées</div>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Rigueur</span>
+                                <span class="skill-tag">Organisation</span>
+                                <span class="skill-tag">Travail d'équipe</span>
+                                <span class="skill-tag">Logistique</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card timeline-expandable">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2017 — 2018</span>
+                            <span class="timeline-badge">Bénévolat</span>
+                        </div>
+                        <h3 class="timeline-title">Bénévole — ADEPA</h3>
+                        <p class="timeline-desc">Centre de recyclage informatique :</p>
+                        <ul class="timeline-list">
+                            <li>Réparation d'équipement informatique (Software/Hardware)</li>
+                            <li>Diagnostique d'équipement informatique (Software/Hardware)</li>
+                        </ul>
+                        <div class="timeline-expand-hint">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                            <span>Voir les compétences</span>
+                        </div>
+                        <div class="timeline-details">
+                            <div class="timeline-skills-label">Compétences mobilisées</div>
+                            <div class="skills-tags">
+                                <span class="skill-tag">Diagnostic matériel</span>
+                                <span class="skill-tag">Réparation hardware</span>
+                                <span class="skill-tag">Installation logicielle</span>
+                                <span class="skill-tag">Recyclage informatique</span>
+                                <span class="skill-tag">Linux</span>
+                                <span class="skill-tag">Windows</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">04</span>
+                <h2 class="section-title">Formation</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-card animate-on-scroll">
+                    <div class="edu-card-accent"></div>
+                    <div class="edu-card-content">
+                        <span class="edu-date">2021 — 2026</span>
+                        <h3 class="edu-title">BUT Réseaux &amp; Télécommunications</h3>
+                        <p class="edu-spec">Spécialité IoT</p>
+                        <p class="edu-place">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Université de Tours, antenne de Blois
+                        </p>
+                    </div>
+                </div>
+                <div class="edu-card animate-on-scroll">
+                    <div class="edu-card-accent"></div>
+                    <div class="edu-card-content">
+                        <span class="edu-date">2021</span>
+                        <h3 class="edu-title">BAC Technologique STI2D</h3>
+                        <p class="edu-place">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Lycée Augustin Thierry
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CERTIFICATIONS ========== -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">05</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card animate-on-scroll">
+                    <div class="cert-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3 class="cert-title">CCNA</h3>
+                    <p class="cert-full">Introduction To Networking</p>
+                    <span class="cert-date">26 Juin 2024</span>
+                </div>
+                <div class="cert-card animate-on-scroll">
+                    <div class="cert-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                    </div>
+                    <h3 class="cert-title">PSSM</h3>
+                    <p class="cert-full">Premiers secours santé mentale</p>
+                    <span class="cert-date">30 Novembre 2023</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">06</span>
+                <h2 class="section-title">Contact</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-cta animate-on-scroll">
+                <h3 class="contact-heading">Intéressé par mon profil ?</h3>
+                <p class="contact-text">
+                    Je suis actuellement à la recherche d'une alternance de 2 ans pour septembre 2026
+                    dans le cadre de mon passage en Master.<br>
+                    N'hésitez pas à me contacter, vous retrouverez mes coordonnées complètes sur mon CV.
+                </p>
+                <div class="contact-cta-cards">
+                    <div class="contact-cta-card">
+                        <div class="contact-cta-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                <path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="contact-cta-label">Formation</span>
+                            <span class="contact-cta-value">BUT3 R&amp;T → Master</span>
+                        </div>
+                    </div>
+                    <div class="contact-cta-card">
+                        <div class="contact-cta-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="contact-cta-label">Disponible à partir de</span>
+                            <span class="contact-cta-value">Septembre 2026</span>
+                        </div>
+                    </div>
+                    <div class="contact-cta-card">
+                        <div class="contact-cta-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="contact-cta-label">Localisation</span>
+                            <span class="contact-cta-value">Blois, France</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2026 Alan Letessier — Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

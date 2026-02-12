@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Letessier — Portfolio</title>
+    <meta name="description" content="Portfolio d'Alan Letessier, étudiant en réseaux et télécommunications. Spécialisé IoT, conteneurisation, et administration réseau.">
+    <meta name="author" content="Alan Letessier">
+    <meta name="keywords" content="Alan Letessier, portfolio, réseaux, télécommunications, IoT, CCNA, développeur, alternance">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Network Grid Background -->
+    <canvas id="networkCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-logo">
+            <span class="terminal-prompt">A<span style="color: var(--color-primary);">L</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" data-route="01">Accueil</a></li>
+            <li><a href="#about" data-route="02">À propos</a></li>
+            <li><a href="#skills" data-route="03">Compétences</a></li>
+            <li><a href="#experience" data-route="04">Expérience</a></li>
+            <li><a href="#education" data-route="05">Formation</a></li>
+            <li><a href="#certifications" data-route="06">Certifications</a></li>
+            <li><a href="#contact" data-route="07">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="status-indicator">
+                <span class="dot active"></span>
+                <span class="status-text">RECHERCHE ALTERNANCE 2 ANS — SEPTEMBRE 2026</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="line" data-delay="0">ALAN</span>
+                <span class="line" data-delay="1">LETESSIER</span>
+            </h1>
+            <div class="hero-subtitle">
+                <span class="ip-address">BUT3 R&T</span>
+                <span class="separator">//</span>
+                <span class="role">Spécialité IoT — Blois, France</span>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-icon">🌐</div>
+                    <div class="stat-label">Réseaux & Télécom</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">📡</div>
+                    <div class="stat-label">IoT & DevOps</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-icon">🔒</div>
+                    <div class="stat-label">CCNA Certifié</div>
+                </div>
+            </div>
+            <a href="#contact" class="cta-button">
+                <span class="cta-text">Me contacter</span>
+                <span class="cta-arrow">→</span>
+            </a>
+        </div>
+        <div class="hero-visual">
+            <div class="network-node main-node">
+                <div class="node-pulse"></div>
+            </div>
+            <div class="network-node sub-node" style="--x: -120px; --y: -80px; --delay: 0s;"></div>
+            <div class="network-node sub-node" style="--x: 120px; --y: -80px; --delay: 0.3s;"></div>
+            <div class="network-node sub-node" style="--x: -120px; --y: 80px; --delay: 0.6s;"></div>
+            <div class="network-node sub-node" style="--x: 120px; --y: 80px; --delay: 0.9s;"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">[02]</span>
+                <h2 class="section-title">À PROPOS</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Je m'appelle <strong>Alan</strong>, j'ai 21 ans. Passionné par <strong>l'informatique</strong> et le <strong>sport</strong>,
+                        je suis animé par l'apprentissage de nouvelles choses et l'amélioration continue de mes compétences.
+                    </p>
+                    <p class="about-description">
+                        Actuellement en BUT3 Réseaux &amp; Télécommunications avec une spécialisation IoT à l'Université de Tours,
+                        je recherche une alternance de 2 ans pour poursuivre vers un Master à partir de septembre 2026.
+                    </p>
+                    <div class="about-metrics">
+                        <div class="metric">
+                            <span class="metric-icon">📍</span>
+                            <span class="metric-text">Blois, France</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-icon">🎓</span>
+                            <span class="metric-text">BUT3 R&T — Recherche alternance 2 ans</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-icon">🌍</span>
+                            <span class="metric-text">Français · Anglais (B2)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">alan@network:~$</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line"><span class="prompt">$</span> whoami</div>
+                            <div class="terminal-line output">Alan Letessier - Étudiant BUT3 R&T</div>
+                            <div class="terminal-line"><span class="prompt">$</span> cat specialties.txt</div>
+                            <div class="terminal-line output">→ Réseaux & Télécommunications</div>
+                            <div class="terminal-line output">→ IoT & Systèmes embarqués</div>
+                            <div class="terminal-line output">→ Infrastructure & DevOps</div>
+                            <div class="terminal-line"><span class="prompt">$</span> cat certifications.txt</div>
+                            <div class="terminal-line output">✓ CCNA - Introduction To Networking (2024)</div>
+                            <div class="terminal-line output">✓ PSSM - Premiers secours santé mentale (2023)</div>
+                            <div class="terminal-line"><span class="prompt">$</span> ping career.goals</div>
+                            <div class="terminal-line output">64 bytes from master.alternance: ttl=64 time=0ms</div>
+                            <div class="terminal-line"><span class="prompt cursor">█</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">[03]</span>
+                <h2 class="section-title">COMPÉTENCES</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-category="network">
+                    <div class="skill-icon">🌐</div>
+                    <h3 class="skill-title">Réseaux & Protocoles</h3>
+                    <ul class="skill-list">
+                        <li>TCP/IP · DNS · DHCP</li>
+                        <li>HTTP/HTTPS · SNMP</li>
+                        <li>OSPF · BGP · VLAN</li>
+                        <li>Spanning Tree · QoS</li>
+                        <li>ACL · NAT/PAT</li>
+                        <li>IPv4/IPv6 · Firewall</li>
+                        <li>Switching & Routing</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card" data-category="telecom">
+                    <div class="skill-icon">📡</div>
+                    <h3 class="skill-title">Télécommunications</h3>
+                    <ul class="skill-list">
+                        <li>Fibre optique</li>
+                        <li>Wi-Fi (802.11) · Bluetooth</li>
+                        <li>LoRa/LoRaWAN · Zigbee</li>
+                        <li>4G/5G</li>
+                        <li>Physique des ondes</li>
+                        <li>Modulation · Antennes</li>
+                        <li>Câblage cuivre & fibre</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card" data-category="iot">
+                    <div class="skill-icon">💻</div>
+                    <h3 class="skill-title">IoT & Embarqué</h3>
+                    <ul class="skill-list">
+                        <li>ESP32/ESP8266</li>
+                        <li>Raspberry Pi · Arduino</li>
+                        <li>MicroPython</li>
+                        <li>MQTT · CoAP</li>
+                        <li>Bus I²C/SPI · GPIO</li>
+                        <li>Capteurs & Actionneurs</li>
+                        <li>Objets connectés</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card" data-category="infra">
+                    <div class="skill-icon">🖥️</div>
+                    <h3 class="skill-title">Infrastructure & Admin</h3>
+                    <ul class="skill-list">
+                        <li>Linux (Debian, Ubuntu)</li>
+                        <li>Windows Server</li>
+                        <li>Docker · Conteneurisation</li>
+                        <li>Load Balancing · VPN</li>
+                        <li>Active Directory</li>
+                        <li>Supervision réseau</li>
+                        <li>Cloudflare (Proxy, WAF, Zero Trust)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card" data-category="security">
+                    <div class="skill-icon">🔐</div>
+                    <h3 class="skill-title">Cryptographie & Sécu</h3>
+                    <ul class="skill-list">
+                        <li>Diffie-Hellman · RSA</li>
+                        <li>AES · TLS/SSL</li>
+                        <li>Certificats X.509</li>
+                        <li>Hachage (SHA, MD5)</li>
+                        <li>Chiffrement symétrique</li>
+                        <li>Chiffrement asymétrique</li>
+                        <li>IPsec · Sécurité réseau</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card" data-category="dev">
+                    <div class="skill-icon">⚡</div>
+                    <h3 class="skill-title">Dev & Scripting</h3>
+                    <ul class="skill-list">
+                        <li>Python · Bash</li>
+                        <li>HTML/CSS · JavaScript</li>
+                        <li>PHP · Java</li>
+                        <li>SQL · Git</li>
+                        <li>API REST</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card" data-category="soft">
+                    <div class="skill-icon">👥</div>
+                    <h3 class="skill-title">Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Gestion d'équipe</li>
+                        <li>Organisation d'événements</li>
+                        <li>Travail associatif</li>
+                        <li>Diagnostic matériel</li>
+                        <li>Gestion de projet</li>
+                        <li>Veille technologique</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">[04]</span>
+                <h2 class="section-title">EXPÉRIENCE</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-badge stage">STAGE</span>
+                            <span class="timeline-date">Avril 2025 — Juillet 2025</span>
+                        </div>
+                        <h3 class="timeline-title">Stagiaire — GHT Santé 41</h3>
+                        <p class="timeline-desc">Deux missions principales :</p>
+                        <ul class="timeline-list">
+                            <li>Remplacement du matériel du cœur de réseau d'un site</li>
+                            <li>Étude et mise en place d'une solution de secours 4G/5G</li>
+                        </ul>
+                        <div class="timeline-skills">
+                            <span class="timeline-skills-label">Compétences :</span>
+                            <div class="timeline-tags">
+                                <span class="tag">Switching</span>
+                                <span class="tag">Routing</span>
+                                <span class="tag">VLAN</span>
+                                <span class="tag">OSPF</span>
+                                <span class="tag">4G/5G</span>
+                                <span class="tag">Fibre optique</span>
+                                <span class="tag">Firewall</span>
+                                <span class="tag">Supervision</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-badge associatif">ASSOCIATIF</span>
+                            <span class="timeline-date">2023 — 2025</span>
+                        </div>
+                        <h3 class="timeline-title">Président — E.T.E.R.</h3>
+                        <p class="timeline-desc">Association étudiante Télécoms et Réseaux :</p>
+                        <ul class="timeline-list">
+                            <li>Gestion d'une cafétéria (petit commerce)</li>
+                            <li>Organisation d'événements</li>
+                            <li>Gestion d'équipes (3 à 10 personnes)</li>
+                        </ul>
+                        <div class="timeline-skills">
+                            <span class="timeline-skills-label">Compétences :</span>
+                            <div class="timeline-tags">
+                                <span class="tag">Gestion d'équipe</span>
+                                <span class="tag">Gestion de projet</span>
+                                <span class="tag">Organisation</span>
+                                <span class="tag">Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-badge job">JOB D'ÉTÉ</span>
+                            <span class="timeline-date">2024</span>
+                        </div>
+                        <h3 class="timeline-title">Préparateur de commande</h3>
+                        <ul class="timeline-list">
+                            <li>Préparation des commandes</li>
+                            <li>Livraison des commandes</li>
+                        </ul>
+                        <div class="timeline-skills">
+                            <span class="timeline-skills-label">Compétences :</span>
+                            <div class="timeline-tags">
+                                <span class="tag">Rigueur</span>
+                                <span class="tag">Organisation</span>
+                                <span class="tag">Logistique</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <span class="timeline-badge benevolat">BÉNÉVOLAT</span>
+                            <span class="timeline-date">2017 — 2018</span>
+                        </div>
+                        <h3 class="timeline-title">Bénévole — ADEPA</h3>
+                        <p class="timeline-desc">Centre de recyclage informatique :</p>
+                        <ul class="timeline-list">
+                            <li>Réparation d'équipement informatique (Software/Hardware)</li>
+                            <li>Diagnostique d'équipement informatique (Software/Hardware)</li>
+                        </ul>
+                        <div class="timeline-skills">
+                            <span class="timeline-skills-label">Compétences :</span>
+                            <div class="timeline-tags">
+                                <span class="tag">Diagnostic matériel</span>
+                                <span class="tag">Réparation hardware</span>
+                                <span class="tag">Linux/Windows</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">[05]</span>
+                <h2 class="section-title">FORMATION</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-accent"></div>
+                    <div class="education-content">
+                        <span class="education-date">2021 — 2026</span>
+                        <h3 class="education-title">BUT Réseaux & Télécommunications</h3>
+                        <p class="education-spec">Spécialité IoT</p>
+                        <p class="education-place">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Université de Tours, antenne de Blois
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-accent"></div>
+                    <div class="education-content">
+                        <span class="education-date">2021</span>
+                        <h3 class="education-title">BAC Technologique STI2D</h3>
+                        <p class="education-place">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Lycée Augustin Thierry
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">[06]</span>
+                <h2 class="section-title">CERTIFICATIONS</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3 class="cert-title">CCNA</h3>
+                    <p class="cert-subtitle">Introduction To Networking</p>
+                    <span class="cert-date">26 Juin 2024</span>
+                    <div class="cert-badge">CISCO</div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                    </div>
+                    <h3 class="cert-title">PSSM</h3>
+                    <p class="cert-subtitle">Premiers secours santé mentale</p>
+                    <span class="cert-date">30 Novembre 2023</span>
+                    <div class="cert-badge">SANTÉ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">[07]</span>
+                <h2 class="section-title">CONTACT</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-title">Intéressé par mon profil ?</h3>
+                    <p class="contact-text">
+                        Je suis actuellement à la recherche d'une alternance de 2 ans pour septembre 2026
+                        dans le cadre de mon passage en Master. N'hésitez pas à me contacter, vous retrouverez
+                        mes coordonnées complètes sur mon CV.
+                    </p>
+                    <div class="contact-cta-cards">
+                        <div class="contact-cta-card">
+                            <div class="contact-cta-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-cta-label">Formation</span>
+                                <span class="contact-cta-value">BUT3 R&T → Master</span>
+                            </div>
+                        </div>
+                        <div class="contact-cta-card">
+                            <div class="contact-cta-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-cta-label">Disponible à partir de</span>
+                                <span class="contact-cta-value">Septembre 2026</span>
+                            </div>
+                        </div>
+                        <div class="contact-cta-card">
+                            <div class="contact-cta-icon">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-cta-label">Localisation</span>
+                                <span class="contact-cta-value">Blois, France</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-visual">
+                    <div class="ping-display">
+                        <div class="ping-header">CONNECTION STATUS</div>
+                        <div class="ping-body">
+                            <div class="ping-line">
+                                <span class="ping-label">Latency:</span>
+                                <span class="ping-value green">8ms</span>
+                            </div>
+                            <div class="ping-line">
+                                <span class="ping-label">Packet Loss:</span>
+                                <span class="ping-value green">0%</span>
+                            </div>
+                            <div class="ping-line">
+                                <span class="ping-label">Status:</span>
+                                <span class="ping-value green">● AVAILABLE</span>
+                            </div>
+                        </div>
+                        <div class="signal-bars">
+                            <div class="bar" style="--height: 30%; --delay: 0s;"></div>
+                            <div class="bar" style="--height: 60%; --delay: 0.1s;"></div>
+                            <div class="bar" style="--height: 90%; --delay: 0.2s;"></div>
+                            <div class="bar" style="--height: 75%; --delay: 0.3s;"></div>
+                            <div class="bar" style="--height: 50%; --delay: 0.4s;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2026 Alan Letessier — Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
