@@ -14,7 +14,6 @@
     var SIGNAL_BAR_INTERVAL_MS = 1500;
     var PARALLAX_HERO_FACTOR = 0.3;
     var PARALLAX_VISUAL_FACTOR = 0.2;
-    var SCROLL_THROTTLE_MS = 16;
     var SKILL_CARD_STAGGER_MS = 100;
     var COUNTER_DURATION_MS = 2000;
     var FRAME_INTERVAL = 16;
@@ -63,7 +62,6 @@
     Node.prototype.draw = function () {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = '#00ffcc';
         ctx.fill();
     };
 
@@ -133,6 +131,8 @@
 
         ctx.clearRect(0, 0, width, height);
 
+        // Batch: set fill style once for all nodes
+        ctx.fillStyle = '#00ffcc';
         for (var i = 0; i < nodes.length; i++) {
             nodes[i].update();
             nodes[i].draw();
@@ -175,6 +175,7 @@
         }, DATA_PARTICLE_INTERVAL_MS);
     } else {
         // Draw a single static frame for reduced-motion users
+        ctx.fillStyle = '#00ffcc';
         for (var i = 0; i < nodes.length; i++) {
             nodes[i].draw();
         }
@@ -190,6 +191,7 @@
             createNodes();
             if (prefersReducedMotion) {
                 ctx.clearRect(0, 0, width, height);
+                ctx.fillStyle = '#00ffcc';
                 for (var i = 0; i < nodes.length; i++) {
                     nodes[i].draw();
                 }
