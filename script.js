@@ -15,8 +15,6 @@
     var PARALLAX_HERO_FACTOR = 0.3;
     var PARALLAX_VISUAL_FACTOR = 0.2;
     var SKILL_CARD_STAGGER_MS = 100;
-    var COUNTER_DURATION_MS = 2000;
-    var FRAME_INTERVAL = 16;
 
     // ============================================================
     // Respect prefers-reduced-motion
@@ -78,6 +76,7 @@
 
     function connectNodes() {
         var distSq = NODE_CONNECTION_DISTANCE * NODE_CONNECTION_DISTANCE;
+        ctx.lineWidth = 0.5;
         for (var i = 0; i < nodes.length; i++) {
             for (var j = i + 1; j < nodes.length; j++) {
                 var dx = nodes[i].x - nodes[j].x;
@@ -90,7 +89,6 @@
                     ctx.moveTo(nodes[i].x, nodes[i].y);
                     ctx.lineTo(nodes[j].x, nodes[j].y);
                     ctx.strokeStyle = 'rgba(0, 255, 204, ' + (1 - distance / NODE_CONNECTION_DISTANCE) + ')';
-                    ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }
             }
@@ -216,27 +214,6 @@
     }
 
     // ============================================================
-    // Stats Counter Animation
-    // ============================================================
-    function animateCounter(element) {
-        var target = parseFloat(element.getAttribute('data-target'));
-        if (isNaN(target)) return;
-        var increment = target / (COUNTER_DURATION_MS / FRAME_INTERVAL);
-        var current = 0;
-
-        function updateCounter() {
-            current += increment;
-            if (current < target) {
-                element.textContent = Math.floor(current);
-                requestAnimationFrame(updateCounter);
-            } else {
-                element.textContent = target;
-            }
-        }
-        updateCounter();
-    }
-
-    // ============================================================
     // Intersection Observer for scroll-in animations
     // ============================================================
     var observerOptions = {
@@ -251,14 +228,6 @@
                     entries[i].target.style.animation = 'fadeInUp 0.8s ease-out forwards';
                 } else {
                     entries[i].target.style.opacity = '1';
-                }
-
-                // Animate counters when hero is visible
-                if (entries[i].target.classList.contains('hero')) {
-                    var statValues = document.querySelectorAll('.stat-value');
-                    for (var j = 0; j < statValues.length; j++) {
-                        animateCounter(statValues[j]);
-                    }
                 }
 
                 observer.unobserve(entries[i].target);
@@ -279,7 +248,7 @@
     var scrollTicking = false;
 
     function updateActiveNav() {
-        var scrollY = window.pageYOffset;
+        var scrollY = window.scrollY;
         for (var i = 0; i < allSections.length; i++) {
             var sectionHeight = allSections[i].offsetHeight;
             var sectionTop = allSections[i].offsetTop - 100;
@@ -335,21 +304,21 @@
     // Parallax effect on scroll (throttled via rAF)
     // ============================================================
     var parallaxTicking = false;
+    var heroContentEl = document.querySelector('.hero-content');
+    var heroVisualEl = document.querySelector('.hero-visual');
 
     function updateParallax() {
         if (prefersReducedMotion) {
             parallaxTicking = false;
             return;
         }
-        var scrolled = window.pageYOffset;
-        var heroContent = document.querySelector('.hero-content');
-        var heroVisual = document.querySelector('.hero-visual');
+        var scrolled = window.scrollY;
 
-        if (heroContent) {
-            heroContent.style.transform = 'translateY(' + (scrolled * PARALLAX_HERO_FACTOR) + 'px)';
+        if (heroContentEl) {
+            heroContentEl.style.transform = 'translateY(' + (scrolled * PARALLAX_HERO_FACTOR) + 'px)';
         }
-        if (heroVisual) {
-            heroVisual.style.transform = 'translateY(-50%) translateY(' + (scrolled * PARALLAX_VISUAL_FACTOR) + 'px)';
+        if (heroVisualEl) {
+            heroVisualEl.style.transform = 'translateY(-50%) translateY(' + (scrolled * PARALLAX_VISUAL_FACTOR) + 'px)';
         }
         parallaxTicking = false;
     }
