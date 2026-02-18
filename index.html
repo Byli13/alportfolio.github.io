@@ -7,14 +7,33 @@
     <meta name="description" content="Portfolio d'Alan Letessier, étudiant en réseaux et télécommunications. Spécialisé IoT, conteneurisation, et administration réseau.">
     <meta name="author" content="Alan Letessier">
     <meta name="keywords" content="Alan Letessier, portfolio, réseaux, télécommunications, IoT, CCNA, développeur, alternance">
+
+    <!-- Security headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self';">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Alan Letessier — Portfolio">
+    <meta property="og:description" content="Portfolio d'Alan Letessier, étudiant en BUT3 R&T spécialité IoT. Recherche alternance 2 ans.">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Performance: preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Skip to content (accessibility) -->
+    <a href="#about" class="skip-link">Aller au contenu principal</a>
+
     <!-- Network Grid Background -->
-    <canvas id="networkCanvas"></canvas>
+    <canvas id="networkCanvas" aria-hidden="true"></canvas>
 
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
         <div class="nav-logo">
             <span class="terminal-prompt">A<span style="color: var(--color-primary);">L</span></span>
         </div>
@@ -30,6 +49,7 @@
     </nav>
 
     <!-- Hero Section -->
+    <main>
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="status-indicator">
@@ -521,6 +541,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -530,6 +552,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
